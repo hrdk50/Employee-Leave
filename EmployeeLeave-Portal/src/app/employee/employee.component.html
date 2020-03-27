@@ -1,0 +1,27 @@
+<!-- <p>employee works!</p> -->
+<div style="text-align: center; font-size: 50px;">
+    <p>Employee</p>
+    </div>
+        <div>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+              <tr>
+                <th scope="col" style="min-width:120px;">Employee Name</th>
+                <th scope="col" style="min-width:120px;">Date</th>
+                <!-- <th scope="col" style="min-width:180px;">To Date</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees">
+                <td>{{employee.EmployeeName}}</td>
+                <td>{{employee.PresentDate}}</td>
+                <!-- <td>{{employee.author}}</td> -->
+                <td class="text-right">
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+    <div style="text-align: center;margin-top: 50px;">
+        <button class="btn btn-primary" routerLink="/leave">Leave</button>
+    </div>

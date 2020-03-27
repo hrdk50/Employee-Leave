@@ -1,0 +1,25 @@
+<!-- <p>leave works!</p> -->
+<div class="container">
+    <div style="text-align: center; font-size: 50px;">
+        <p>Leave</p>
+        </div>
+    <div>
+        <form [formGroup]="leaveFormGroup">
+        <div>
+        <label>Employee Name : </label>&nbsp;&nbsp;
+        <input type="text" placeholder="Enter your name" class="form-control col-md-3" formControlName="employeeName">
+        </div>
+        <div>
+            <label>Start Date : </label>
+           <input type="date" placeholder="select the date" class="form-control col-md-3" (blur)="validateStartDate()" formControlName="startDate">
+        </div>
+        <div>
+            <label>End Date : </label>
+            <input type="date" placeholder="select the date" class="form-control col-md-3" formControlName="endDate">
+        </div><br>
+        <div>
+            <input type="submit" class="btn btn-primary" [disabled]="!leaveFormGroup.valid" (click)= "onSubmit()">
+        </div>
+    </form>
+    </div>
+</div>
